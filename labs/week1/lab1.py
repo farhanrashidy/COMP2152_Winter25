@@ -1,8 +1,8 @@
 # COMMENTS
 # Sample Coding Questions 01 Week 01
 """
-Sheikh Mohammad Farhan Rashidy
-101512659
+Name: Sheikh Mohammad Farhan Rashidy
+Student Id: 101512659
 """
 
 # DEFINING VARIABLE
