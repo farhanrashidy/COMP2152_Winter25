@@ -132,7 +132,7 @@ if not input_invalid:
     print("    |    Your belt: ", belt)
 
     ## Lab 5 - Question 4: Use Loot
-    
+    loot_options, health_points = functions_lab05.use_loot(loot_options, belt)
 
     print("    ------------------------------------------------------------------")
     print("    |", end="    ")
@@ -188,8 +188,15 @@ if not input_invalid:
         print("    |", end="    ")
 
         # Lab 5: Question 5:
+    
         input("Roll to see who strikes first (Press Enter)")
         # Lab 5: Question 5
+        attack_roll = random.choice([1,2,3,4,5,6])
+        if attack_roll in [1,2,3]:
+            print("Hero attacks first")
+        else:
+            print("Monster rolls first")
+
         if not (attack_roll % 2 == 0):
             print("    |", end="    ")
             input("You strike (Press enter)")
