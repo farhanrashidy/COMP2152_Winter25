@@ -2,7 +2,7 @@
 import random
 
 # Put all the functions into another file and import them
-import functions_lab05_solution
+import labs.week5.functions_lab05 as functions_lab05
 
 # Game Flow
 # Define two Dice
@@ -119,13 +119,14 @@ if not input_invalid:
 
     # Lab 5 - Question 4: Collect Loot First time
     
+    loot_options, belt = functions_lab05.collect_loot(loot_options, belt)
     print("    ------------------------------------------------------------------")
     print("    |", end="    ")
     input("Roll for second item (Press enter)")
 
     # Lab 5 - Question 4: Collect Loot Second time
     
-
+    loot_options, belt = functions_lab05.collect_loot(loot_options, belt)
     print("    |    You're super neat, so you organize your belt alphabetically:")
     belt.sort()
     print("    |    Your belt: ", belt)
@@ -173,7 +174,7 @@ if not input_invalid:
     num_dream_lvls = input("How many dream levels do you want to go down?")
     if num_dream_lvls != 0:
         health_points -= 1
-        crazy_level = functions_lab05_solution.inception_dream(num_dream_lvls)
+        crazy_level = functions_lab05.inception_dream(num_dream_lvls)
         combat_strength += crazy_level
         print("combat strength: " + str(combat_strength))
         print("health points: " + str(health_points))
